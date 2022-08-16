@@ -1,0 +1,109 @@
+/* I chose to imitate the stylings of "Akira Vol 1 - page 61.jpg" */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+      --colour-one: rgb(0,0,0);
+      --colour-two: rgb(100,100,100);
+      --colour-three: rgb(180,180,180);
+      --colour-four: rgb(240,240,240);
+      --border-one: dashed 2px white;
+}
+/* The above root determines a colour pallete for the grids */
+#grid-container-bg{
+    background-color: var(--colour-one);
+    background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);;
+/* I chose to make the background a colourful gradient to seperate the boxes with the background */
+    width: 71vh;
+    height: 100vh;
+    padding: 15px;
+   /*  width: 100vw;
+    height: 177vh; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2vh 1vw;
+    /* I chose to differentiate the gap viewer-width and viewer-height to imitate how elements on the y axis was spaced closer together and elements on the x axis having more of a gap between the boxes */
+}
+/* this, combined with the html, determines the layout of the page */
+/* I've deliberately inserted several "1fr" values in the columns and rows as to imitate the spacing of the Akira comic accurately */
+.grid-item-one{
+    border: var(--border-one);
+}
+
+/* Comment out the above ".grid-item-one" statement to remove those borders */
+
+#box-one{
+    grid-row: 1/3;
+    grid-column: 1/7;
+    background-color: var(--colour-one);
+    border-style: inset;
+}
+/* "box-one" describes the first box as being placed at the 1/3 placement in the larger "grid-container-bg" grid. it also calls to the aforementioned colours setup at the top of the page. In this instance, referencing "--colour-two" which is a bit of a darker grey */
+/* I chose to the border style as inset as it gave it a nice grey gradient that distinguishes the border for each box*/
+#box-two{
+    grid-row: 1/3;
+    grid-column: 7/11;
+    background-color: var(--colour-three);
+    display: grid;
+    border-style: inset;
+}
+/* "box-two" does the exact same thing as the above box however changes it's position/sizing and colour */
+#box-three{
+    grid-row: 3/5;
+    grid-column: 1/6;
+    background-color: var(--colour-two);
+    display: grid;
+    border-style: inset;
+    /* Deliberately kept the awkward spacing between box three and box four beneath it as per the styling of the comic */
+}
+
+#box-four{
+    grid-row: 5/6;
+    grid-column: 1/6;
+    background-color: var(--colour-three);
+    display: grid;
+    border-style: inset;
+}
+
+#box-five{
+    grid-row: 3/6;
+    grid-column: 6/11;
+    background-color: var(--colour-one);
+    display: grid;
+    border-style: inset;
+}
+
+#box-six{
+    grid-row: 10/6;
+    grid-column: 1/5;
+    background-color: var(--colour-one);
+    display: grid;
+    border-style: inset;
+}
+
+#box-seven{
+    grid-row: 8/6;
+    grid-column: 5/11;
+    background-color: var(--colour-two);
+    display: grid;
+    border-style: inset;
+    margin-bottom: 30px;
+    /* I raised the margin of the bottom to imitate the styling of how the elements are postioned along the y axis */
+}
+
+#box-eight{
+    grid-row: 7/10;
+    grid-column: 5/11;
+    background-color: var(--colour-three);
+    display: grid;
+    border-style: inset;
+    margin-top: 110px;
+    /* Did the same as the previous styling except lowered the top to fall in line with the styling conventions of the comic */
+}
