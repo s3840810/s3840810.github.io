@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "font0";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  }
+
+  @font-face {
+    font-family: "font1";
+    src: url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  }
+
+  @font-face {
+    font-family: "font2";
+    src: url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+  }
+
+  @font-face {
+    font-family: "font3";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  }
+
+  @font-face {
+    font-family: "font5";
+    src: url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+  }
+
+  @font-face {
+    font-family: "font6";
+    src: url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+  }
+
+  @font-face {
+    font-family: "font7";
+    src: url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+  }
+
+:root{
+      --colour-one: rgb(0,0,0);
+      --colour-two: rgb(100,100,100);
+      --colour-three: rgb(180,180,180);
+      --colour-four: rgb(240,240,240);
+      --border-one: dashed 2px white;
+}
+
+:root{
+    font-family: fontPickerArray;
+}
+
+body{background-color: black;}
+
+.OldTextColour{
+    color:aqua;
+    cursor: pointer;
+}
+.NewTextToColour{
+    color:brown;
+    transition: 1s;
+    
+}
+/* I've developed a feature here where when the cursor falls over the line, the opacity will change from 0 to 1.
+ This means the user will have to find the line before they can click on it, the hover will reveal it's location */
+.textButton{
+    opacity:0;
+    font-size: 50px;
+    color: white;
+    /* transition: 2s; */
+    cursor: pointer;
+    transition: 2s;
+    /* I've also added a cursor pointer change here so the user knows that the line is clickable */
+}
+
+
+
+.textButton:hover{
+    opacity:1;
+    font-size: 50px;
+    color: white;
+   /*  font: arial; */
+    /* I used the colour green while the background was still white just to test if the hover/opacity feature worked correctly here */
+    /* color:green; */
+    transition: .3s;
+    /* Having a longer fade out will maintain the illusion that the user is finding this hidden poetry like words hiding in shadows before fading back
+    into obscurity */
+}
+
+.textFadeOut{
+    opacity:0;
+    transition: .5s;
+}
+.textFadeOut:hover{
+    opacity:0;
+    /* transition: .5s; */
+}
+/* experimenting with the hover fade in */
+/* p:hover{
+    color: var(--colour-four);
+    transition: 0.5s;
+  } */
